@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length())
+            return false;
+        char[] S = s.toCharArray();
+        char[] T = t.toCharArray();
+        int middle = S.length/2 ;
+
+        for(int i = 0; i < middle; i++){
+            if(S[i] != T[i])
+                return false;
+        }
+
+        return true;
+        
+    }
+}
